@@ -27,4 +27,7 @@ public record WashingMessage(ActorThread<WashingMessage> sender, Order order) {
         WATER_DRAIN,
         ACKNOWLEDGMENT
     }
+    public String toString() {
+        return order + " from " + ((sender == null) ? "** unknown **" : sender.getClass().getSimpleName());
+      }
 }

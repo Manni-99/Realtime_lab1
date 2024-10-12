@@ -117,6 +117,7 @@ class ActorThreadTest {
         assertEquals(3, methods.length, "expected three methods: send, receive, receiveWithTimeout");
 
         for (Method m : methods) {
+            System.out.println("Method: " + m.getName() + ", Modifiers: " + Modifier.toString(m.getModifiers()));
             assertFalse(Modifier.isSynchronized(m.getModifiers()), "method " + m.getName() + " is synchronized, but shouldn't be");
         }
     }

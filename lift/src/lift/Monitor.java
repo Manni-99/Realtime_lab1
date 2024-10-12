@@ -51,7 +51,7 @@ public class Monitor {
             toExit[pass.getDestinationFloor()]++;
             nbrOfPassengers++;
             passengersEntering++;
-            notifyAll();
+         //   notifyAll();
     }
 
     public synchronized void enterCompleted(){
